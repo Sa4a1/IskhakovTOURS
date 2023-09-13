@@ -31,5 +31,13 @@ namespace IskhakovTours
         {
             Manager.MainFrame.GoBack();
         }
+
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+                Back_btn.Visibility = Visibility.Visible;
+            else 
+                Back_btn.Visibility = Visibility.Hidden;    
+        }
     }
 }
